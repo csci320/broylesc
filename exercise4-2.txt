@@ -1,0 +1,44 @@
+mysql> SELECT * FROM visit WHERE first_name = "Mark" OR first_name = "Benjamin" \G
+*************************** 1. row ***************************
+               first_name: Mark
+                last_name: Martin
+                    email: martinm@dewv.edu
+            academic_rank: Junior
+       residential_status: On Campus
+                   majors: Computer Science
+                   sports: Baseball
+slp_instructor_first_name: NULL
+ slp_instructor_last_name: NULL
+            check_in_time: 2020-08-24 11:18:20
+           check_out_time: NULL
+                 location: Albert Hall
+                  purpose: Study MySQL
+         purpose_achieved: Y
+                 tutoring: Computer Science
+                 comments: New Student
+*************************** 2. row ***************************
+               first_name: Benjamin
+                last_name: Bard
+                    email: bardb@dewv.edu
+            academic_rank: Sophmore
+       residential_status: On Campus
+                   majors: Math
+                   sports: Tennis
+slp_instructor_first_name: NULL
+ slp_instructor_last_name: NULL
+            check_in_time: 2020-08-24 11:21:00
+           check_out_time: NULL
+                 location: Albert Hall
+                  purpose: Study Calculus
+         purpose_achieved: Y
+                 tutoring: Math
+                 comments: New Student Two
+2 rows in set (0.00 sec)
+
+mysql> DELETE FROM visit WHERE first_name = "Mark" OR first_name = "Benjamin";
+Query OK, 2 rows affected (0.04 sec)
+
+mysql> SELECT * FROM visit WHERE first_name = "Mark" OR first_name = "Benjamin" \G
+Empty set (0.00 sec)
+
+mysql> notee;

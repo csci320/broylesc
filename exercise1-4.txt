@@ -1,0 +1,10 @@
+mysql> SELECT DISTINCT location FROM visit ORDER BY location;
++----------------+
+| location       |
++----------------+
+| Albert Hall    |
+| Writing center |
++----------------+
+2 rows in set (0.00 sec)
+
+mysql> notee;

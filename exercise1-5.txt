@@ -1,0 +1,14 @@
+mysql> SELECT DISTINCT sports FROM visit WHERE sports IS NOT NULL ORDER BY sports;
++--------------------------+
+| sports                   |
++--------------------------+
+| Baseball                 |
+| Men's golf               |
+| Men's soccer, Baseball   |
+| Women's soccer, Softball |
++--------------------------+
+4 rows in set (0.00 sec)
+
+mysql> notee;
+
+The sports field for students with multiple sports selected contains duplicates.
