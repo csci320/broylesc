@@ -1,0 +1,24 @@
+mysql> INSERT INTO visit (first_name, last_name, email, academic_rank, residential_status, majors, sports, location, purpose, purpose_achieved, tutoring, comments) VALUES ('Mark', 'Martin', 'martinm@dewv.edu', 'Junior', 'On Campus', 'Computer Science', "Baseball", 'Albert Hall', 'Study MySQL', 'Y', 'Computer Science', 'New Student');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> SELECT * FROM visit WHERE purpose = "Study MySQL" \G
+*************************** 1. row ***************************
+               first_name: Mark
+                last_name: Martin
+                    email: martinm@dewv.edu
+            academic_rank: Junior
+       residential_status: On Campus
+                   majors: Computer Science
+                   sports: Baseball
+slp_instructor_first_name: NULL
+ slp_instructor_last_name: NULL
+            check_in_time: 2020-08-24 11:18:20
+           check_out_time: NULL
+                 location: Albert Hall
+                  purpose: Study MySQL
+         purpose_achieved: Y
+                 tutoring: Computer Science
+                 comments: New Student
+1 row in set (0.00 sec)
+
+mysql> notee;

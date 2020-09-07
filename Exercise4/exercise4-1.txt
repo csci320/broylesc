@@ -1,0 +1,27 @@
+mysql> SELECT * FROM visit WHERE purpose = "Study SQL" \G
+*************************** 1. row ***************************
+               first_name: Bob
+                last_name: Booth
+                    email: bbooth@dewv.edu
+            academic_rank: Sophomore
+       residential_status: On Campus
+                   majors: Computer Science, Philosophy
+                   sports: Men's golf
+slp_instructor_first_name: NULL
+ slp_instructor_last_name: NULL
+            check_in_time: 2020-08-24 11:12:07
+           check_out_time: NULL
+                 location: Albert Hall
+                  purpose: Study SQL
+         purpose_achieved: Y
+                 tutoring: NULL
+                 comments: NULL
+1 row in set (0.00 sec)
+
+mysql> DELETE FROM visit WHERE purpose = "Study SQL";
+Query OK, 1 row affected (0.05 sec)
+
+mysql> SELECT * FROM visit WHERE purpose = "Study SQL" \G
+Empty set (0.00 sec)
+
+mysql> notee;

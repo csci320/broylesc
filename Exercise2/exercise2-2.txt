@@ -1,0 +1,51 @@
+mysql> SELECT majors FROM visit ORDER BY majors;
++------------------------------+
+| majors                       |
++------------------------------+
+| Biology                      |
+| Chemistry                    |
+| Chemistry                    |
+| Computer Science             |
+| Computer Science, Philosophy |
+| English                      |
+| English                      |
+| Math, Comp Sci               |
+| Math, Comp Sci               |
+| Philosophy and English       |
+| Philosophy and English       |
+| Philosophy and English       |
+| Undecided                    |
+| Undecided                    |
++------------------------------+
+14 rows in set (0.00 sec)
+
+mysql> UPDATE visit SET majors = 'Math, Computer Science' WHERE majors = 'Math, Comp Sci';
+Query OK, 2 rows affected (0.04 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> UPDATE visit SET majors = 'Philosophy, English' WHERE majors = 'Philosophy and English';
+Query OK, 3 rows affected (0.05 sec)
+Rows matched: 3  Changed: 3  Warnings: 0
+
+mysql> SELECT majors FROM visit ORDER BY majors;
++------------------------------+
+| majors                       |
++------------------------------+
+| Biology                      |
+| Chemistry                    |
+| Chemistry                    |
+| Computer Science             |
+| Computer Science, Philosophy |
+| English                      |
+| English                      |
+| Math, Computer Science       |
+| Math, Computer Science       |
+| Philosophy, English          |
+| Philosophy, English          |
+| Philosophy, English          |
+| Undecided                    |
+| Undecided                    |
++------------------------------+
+14 rows in set (0.00 sec)
+
+mysql> notee;

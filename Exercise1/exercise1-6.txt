@@ -1,0 +1,18 @@
+mysql> SELECT DISTINCT majors FROM visit ORDER BY majors;
++------------------------------+
+| majors                       |
++------------------------------+
+| Biology                      |
+| Chemistry                    |
+| Computer Science             |
+| Computer Science, Philosophy |
+| English                      |
+| Math, Comp Sci               |
+| Philosophy and English       |
+| Undecided                    |
++------------------------------+
+8 rows in set (0.00 sec)
+
+mysql> notee;
+
+The same issue as with the sports. Also a inconsistantcy in Naming.
