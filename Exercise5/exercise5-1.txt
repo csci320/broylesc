@@ -1,0 +1,55 @@
+mysql> INSERT INTO sport (name, gender, season) values
+    -> ('Lacrosse','Men','Fall');
+ERROR 1062 (23000): Duplicate entry 'Lacrosse-Men' for key 'sport.PRIMARY'
+
+mysql> INSERT INTO major (name) values ('Chemistry');
+ERROR 1062 (23000): Duplicate entry 'Chemistry' for key 'major.PRIMARY'
+
+mysql> update sport set name = 'Swimming' where name = 'Volleyball';
+ERROR 1062 (23000): Duplicate entry 'Swimming-Women' for key 'sport.PRIMARY'
+
+mysql> update major set name = 'Chemistry' where name = 'Undecided';
+ERROR 1062 (23000): Duplicate entry 'Chemistry' for key 'major.PRIMARY'
+
+mysql> create table student_major (
+    -> email varchar(128) NOT NULL,
+    -> major_name varchar(128) NOT NULL,
+    -> constraint primary key(email, major_name));
+Query OK, 0 rows affected (0.19 sec)
+
+mysql> insert into student_major(email, major_name) values
+    -> ('ddavis@dewv.net','Philosophy'),
+    -> ('ddavis@dewv.net','English'),
+    -> ('ggatehouse@dewv.net','Math'),
+    -> ('ggatehouse@dewv.net','Computer Science'),
+    -> ('ccadillac@dewv.net','English'),
+    -> ('fforest@dewv.net','Undecided'),
+    -> ('hhermanson@dewv.net','Chemistry'),
+    -> ('eelkins@dewv.net','Biology'),
+    -> ('bbooth@dewv.net','Computer Science'),
+    -> ('bbooth@dewv.net','Philosophy'),
+    -> ('aalbert@dewv.net','Computer Science'),
+    -> ('iicehouse@dewv.net','Chemistry');
+Query OK, 12 rows affected (0.06 sec)
+Records: 12  Duplicates: 0  Warnings: 0
+
+mysql> select * from student_major;
++---------------------+------------------+
+| email               | major_name       |
++---------------------+------------------+
+| aalbert@dewv.net    | Computer Science |
+| bbooth@dewv.net     | Computer Science |
+| bbooth@dewv.net     | Philosophy       |
+| ccadillac@dewv.net  | English          |
+| ddavis@dewv.net     | English          |
+| ddavis@dewv.net     | Philosophy       |
+| eelkins@dewv.net    | Biology          |
+| fforest@dewv.net    | Undecided        |
+| ggatehouse@dewv.net | Computer Science |
+| ggatehouse@dewv.net | Math             |
+| hhermanson@dewv.net | Chemistry        |
+| iicehouse@dewv.net  | Chemistry        |
++---------------------+------------------+
+12 rows in set (0.00 sec)
+
+mysql> notee;
