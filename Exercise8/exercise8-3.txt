@@ -1,0 +1,19 @@
+mysql> create table location (
+    -> name varchar(15) NOT NULL,
+    -> assistant varchar(128) NOT NULL,
+    -> constraint primary key(name));
+Query OK, 0 rows affected (0.46 sec)
+
+mysql> insert into location (name, assistant) select distinct location, assistant_email from staff;
+Query OK, 2 rows affected (0.05 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> alter table staff drop column assistant_email;
+Query OK, 0 rows affected (0.58 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table staff add constraint foreign key(location) references location(name);
+Query OK, 5 rows affected (0.64 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> notee

@@ -1,0 +1,13 @@
+I believe visit2NF is BCNF compliant. All determinates are canidate keys.
+
+Student does not satisfy BCNF with the slp_instructor.
+
+Sport is not 3NF because of its complex relations therefor its not BCNF.
+
+Major is BCNF, it has only the one column.
+
+Student_sport does not fit 3NF because of the gender sport relationship and not BCNF
+
+student_major does fit 3nf because it is a direct relationship between the student and a major.
+
+computer and printer are both BCNF compliant as they were created to be.

@@ -1,0 +1,1 @@
+Both printer and computer are now in 3NF because there is nolonger a transitive dependency.

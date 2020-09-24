@@ -1,0 +1,20 @@
+mysql> create table printer( 
+    -> name varchar(16),
+    -> color varchar(3),
+    -> constraint primary key(name)
+    -> );
+Query OK, 0 rows affected (0.32 sec)
+
+mysql> insert into printer (name, color) select distinct printer, color from computer;
+Query OK, 4 rows affected (0.05 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> alter table computer drop column color;
+Query OK, 0 rows affected (0.48 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table computer add constraint foreign key(printer) references printer(name);
+Query OK, 5 rows affected (0.62 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> notee

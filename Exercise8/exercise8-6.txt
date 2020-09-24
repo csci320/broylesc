@@ -1,0 +1,3 @@
+Keeping the transaction records simple is alright depending on scale.
+
+Management and Executive levels benifit from having high levels of normalization to ensure data consistantcy with complex operations.

@@ -1,0 +1,11 @@
+I believe visit2NF is in 3NF. There are no transitive dependencies.
+
+Student also satisfys 3NF with no transitive dependencies.
+
+Sport is not 3NF because of its complex relations.
+
+Major is 3NF for sure, it has only the one column.
+
+Student_sport does not fit 3NF because of the gender sport relationship.
+
+student_major does fit 3nf because it is a direct relationship between the student and a major.
