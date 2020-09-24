@@ -1,0 +1,2 @@
+1. 'email' has a non-trivial functional dependency with all of the columns involving information about the visit and student withe the exception of the students name which is trivial
+   functional dependency.
