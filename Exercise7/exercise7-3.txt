@@ -1,0 +1,1 @@
+Theorectically check_out_time would also work as a primary key when the field is populated, otherwise no.

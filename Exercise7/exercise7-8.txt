@@ -1,0 +1,7 @@
+sport is not in 2NF because season is determined by sport name.
+
+student_sport is in 2NF because even though the columns are related to each other they do not determine each other.
+
+major is in 2NF because it only has one column, name.
+
+student_major is in 2NF because like student_sport the two columns are related but donot determine each other.

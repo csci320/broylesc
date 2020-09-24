@@ -1,0 +1,53 @@
+mysql> insert into student (first_name, last_name, email, academic_rank, residential_status, slp_instructor_first_name, slp_instructor_last_name)
+    -> select DISTINCT first_name, last_name, email, academic_rank, residential_status, slp_instructor_first_name, slp_instructor_last_name from visit1nf where first_name != 'Debbie' and  email != 'cadillac@dewv.net';
+Query OK, 9 rows affected (0.06 sec)
+Records: 9  Duplicates: 0  Warnings: 0
+
+mysql> select * from student;
++------------+-----------+---------------------+---------------+--------------------+---------------------------+--------------------------+
+| first_name | last_name | email               | academic_rank | residential_status | slp_instructor_first_name | slp_instructor_last_name |
++------------+-----------+---------------------+---------------+--------------------+---------------------------+--------------------------+
+| Alice      | Albert    | aalbert@dewv.net    | Senior        | On campus          | Sam                       | Studybuddy               |
+| Bob        | Booth     | bbooth@dewv.net     | Sophomore     | On campus          | NULL                      | NULL                     |
+| Charlie    | Cadillac  | ccadillac@dewv.net  | Senior        | Off campus         | Tery                      | Tutor                    |
+| Debra      | Davis     | ddavis@dewv.net     | Sophmore      | On campus          | NULL                      | NULL                     |
+| Eric       | Elkins    | eelkins@dewv.net    | Senior        | Off campus         | NULL                      | NULL                     |
+| Frank      | Forest    | fforest@dewv.net    | Sophmore      | On campus          | NULL                      | NULL                     |
+| Gary       | Gatehouse | ggatehouse@dewv.net | Sophomore     | On campus          | Terry                     | Tutor                    |
+| Hannah     | Hermanson | hhermanson@dewv.net | Senior        | On campus          | NULL                      | NULL                     |
+| Irving     | Icehouse  | iicehouse@dewv.net  | Sophomore     | On campus          | Sam                       | Studybuddy               |
++------------+-----------+---------------------+---------------+--------------------+---------------------------+--------------------------+
+9 rows in set (0.00 sec)
+
+mysql> insert into visit2nf (email, check_in_time, check_out_time, location, purpose, purpose_achieved, tutoring, comments)
+    -> select distinct email, check_in_time, check_out_time, location, purpose, purpose_achieved, tutoring, comments from visit1nf where email != 'cadillac@dewv.net';
+Query OK, 13 rows affected (0.05 sec)
+Records: 13  Duplicates: 0  Warnings: 0
+
+mysql> insert into visit2nf (email, check_in_time, check_out_time, location, purpose, purpose_achieved, tutoring, comments) values
+    -> ('ccadillac@dewv.net', '2016-08-30 11:51:15', '2016-08-31 11:53:44', 'Albert Hall', 'get form signature', 'Y', NULL, NULL)
+    -> ;
+Query OK, 1 row affected (0.04 sec)
+
+mysql> select * from visit2nf;
++---------------------+---------------------+---------------------+----------------+-------------------------+------------------+----------+--------------------------------------+
+| email               | check_in_time       | check_out_time      | location       | purpose                 | purpose_achieved | tutoring | comments                             |
++---------------------+---------------------+---------------------+----------------+-------------------------+------------------+----------+--------------------------------------+
+| aalbert@dewv.net    | 2016-08-30 16:15:05 | 2016-08-30 16:50:04 | Albert Hall    | Study hall              | Y                | NULL     | NULL                                 |
+| bbooth@dewv.net     | 2016-08-30 16:44:54 | 2016-08-30 16:53:44 | Albert Hall    | study hall              | Y                | NULL     | New year, fresh start!               |
+| ccadillac@dewv.net  | 2016-08-30 11:51:15 | 2016-08-31 11:53:44 | Albert Hall    | get form signature      | Y                | NULL     | NULL                                 |
+| ccadillac@dewv.net  | 2016-08-30 14:55:55 | 2016-08-30 16:53:44 | Albert Hall    | baseball meeting        | ?                | NULL     | NULL                                 |
+| ddavis@dewv.net     | 2016-08-30 16:36:56 | 2016-08-30 17:57:47 | Albert Hall    | Tour of learning center | Y                | NULL     | NULL                                 |
+| ddavis@dewv.net     | 2016-08-31 13:36:36 | 2016-08-31 14:47:44 | Writing center | Help with paper         | Y                | NULL     | NULL                                 |
+| ddavis@dewv.net     | 2016-08-31 16:00:06 | NULL                | Albert Hall    | MATH 101                | NULL             | NULL     | NULL                                 |
+| eelkins@dewv.net    | 2016-08-30 16:49:59 | 2016-08-30 16:56:46 | Albert Hall    | Team Meeting            | N                | NULL     | Sorry coach i had wrong time. my bad |
+| fforest@dewv.net    | 2016-08-30 16:59:05 | 2016-08-30 17:03:40 | Albert Hall    | math help               | Y                | Math 101 | NULL                                 |
+| fforest@dewv.net    | 2016-08-31 11:19:15 | 2016-08-31 12:23:22 | Albert Hall    | math help               | Y                | MATH 101 | NULL                                 |
+| ggatehouse@dewv.net | 2016-08-30 14:35:55 | 2016-08-30 15:53:44 | Albert Hall    | study hall              | Y                | NULL     | New year, fresh start!               |
+| ggatehouse@dewv.net | 2016-08-31 14:36:56 | NULL                | Albert Hall    | study hall              | NULL             | NULL     | NULL                                 |
+| hhermanson@dewv.net | 2016-08-30 16:55:55 | 2016-08-30 16:59:44 | Albert Hall    | study hall              | Y                | NULL     | NULL                                 |
+| iicehouse@dewv.net  | 2016-08-30 15:56:56 | 2016-08-30 16:56:46 | Albert Hall    | Meet SLP instructor     | Y                | NULL     | Cubicle B computer is not working.   |
++---------------------+---------------------+---------------------+----------------+-------------------------+------------------+----------+--------------------------------------+
+14 rows in set (0.00 sec)
+
+mysql> notee

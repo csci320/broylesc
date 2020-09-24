@@ -1,0 +1,1 @@
+With the current data you could use names as primary keys however this would not always remain true. Also each record should have a id associated with it as a primary key.

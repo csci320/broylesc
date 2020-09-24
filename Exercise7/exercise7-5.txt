@@ -1,0 +1,1 @@
+The student table contains data that only relates to itself. It doesnt refer to other tables or contain information that is instance specific.

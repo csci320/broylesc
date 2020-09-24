@@ -1,0 +1,109 @@
+mysql> alter table student_sport
+    -> add constraint foreign key(email) references student(email);
+Query OK, 6 rows affected (0.89 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+mysql> describe student_major;
++------------+--------------+------+-----+---------+-------+
+| Field      | Type         | Null | Key | Default | Extra |
++------------+--------------+------+-----+---------+-------+
+| email      | varchar(128) | NO   | PRI | NULL    |       |
+| major_name | varchar(128) | NO   | PRI | NULL    |       |
++------------+--------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> alter table student_major add constraint foreign key(email) references student(email);
+Query OK, 12 rows affected (0.89 sec)
+Records: 12  Duplicates: 0  Warnings: 0
+
+mysql> alter table student_major add constraint foreign key(major_name) references major(major_name);
+ERROR 3734 (HY000): Failed to add the foreign key constraint. Missing column 'major_name' for constraint 'student_major_ibfk_2' in the referenced table 'major'
+mysql> describe major
+    -> ;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| name  | varchar(29) | NO   | PRI | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+1 row in set (0.00 sec)
+
+mysql> alter table student_major add constraint foreign key(major_name) references major(name);
+ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`learning_center`.`#sql-13a_b`, CONSTRAINT `student_major_ibfk_2` FOREIGN KEY (`major_name`) REFERENCES `major` (`name`))
+mysql> select * from major;
++-------------------------------+
+| name                          |
++-------------------------------+
+| Accounting                    |
+| Adventure Recreation          |
+| Appalachian Studies           |
+| Art                           |
+| Biology                       |
+| Business                      |
+| Chemistry                     |
+| Child and Family Studies      |
+| Computer Science              |
+| Criminal Justice              |
+| Criminology                   |
+| Design and Technical Theatre  |
+| Early Childhood Education     |
+| Economics                     |
+| Education                     |
+| English                       |
+| Environmental Science         |
+| Exercise Science              |
+| Finance                       |
+| History                       |
+| Hospitality Management        |
+| Management                    |
+| Marketing                     |
+| Mathematics                   |
+| Music                         |
+| Nursing                       |
+| Philosophy                    |
+| Physical Education            |
+| Political Science             |
+| Pre-Dental                    |
+| Pre-Law                       |
+| Pre-Medical                   |
+| Pre-Ministerial               |
+| Pre-Pharmacy                  |
+| Pre-Physical Therapy          |
+| Pre-Veterinary                |
+| Psychology and Human Services |
+| Religion and Philosophy       |
+| Sociology                     |
+| Sport Management              |
+| Sustainability Studies        |
+| Theatre Arts                  |
+| Undecided                     |
++-------------------------------+
+43 rows in set (0.01 sec)
+
+mysql> select * from student_major;
++---------------------+------------------+
+| email               | major_name       |
++---------------------+------------------+
+| aalbert@dewv.net    | Computer Science |
+| bbooth@dewv.net     | Computer Science |
+| bbooth@dewv.net     | Philosophy       |
+| ccadillac@dewv.net  | English          |
+| ddavis@dewv.net     | English          |
+| ddavis@dewv.net     | Philosophy       |
+| eelkins@dewv.net    | Biology          |
+| fforest@dewv.net    | Undecided        |
+| ggatehouse@dewv.net | Computer Science |
+| ggatehouse@dewv.net | Math             |
+| hhermanson@dewv.net | Chemistry        |
+| iicehouse@dewv.net  | Chemistry        |
++---------------------+------------------+
+12 rows in set (0.01 sec)
+
+mysql> update student_major set major_name = 'Mathematics' where major_name = 'Math';
+Query OK, 1 row affected (0.04 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> alter table student_major add constraint foreign key(major_name) references major(name);
+Query OK, 12 rows affected (1.20 sec)
+Records: 12  Duplicates: 0  Warnings: 0
+
+mysql> notee
