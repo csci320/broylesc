@@ -1,0 +1,5 @@
+mysql> create index email on visit(email);
+Query OK, 0 rows affected (0.15 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> notee;
