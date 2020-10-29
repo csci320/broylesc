@@ -1,0 +1,14 @@
+mysql> select email from visit where email in (select email from student_sport);
++--------------------+
+| email              |
++--------------------+
+| ccadillac@dewv.net |
+| ddavis@dewv.net    |
+| bbooth@dewv.net    |
+| eelkins@dewv.net   |
+| ddavis@dewv.net    |
+| ddavis@dewv.net    |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> notee
