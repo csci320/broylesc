@@ -1,0 +1,11 @@
+mysql> select a.first_name, a.last_name, b.first_name, b.last_name from staff a join staff b on a.first_name <> b.first_name join location on a.location = location.name where assistant = b.email;
++------------+------------+------------+-----------+
+| first_name | last_name  | first_name | last_name |
++------------+------------+------------+-----------+
+| Edna       | Editor     | Greg       | Guardian  |
+| Sam        | Studybuddy | Chris      | Calendar  |
+| Terry      | Tutor      | Chris      | Calendar  |
++------------+------------+------------+-----------+
+3 rows in set (0.00 sec)
+
+mysql> notee
