@@ -1,0 +1,14 @@
+mysql> create view commuter_students as select first_name, last_name, email, academic_rank, slp_instructor_first_name, slp_instructor_last_name
+    -> from student where residential_status = 'Off campus';
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> select * from commuter_students;
++------------+-----------+--------------------+---------------+---------------------------+--------------------------+
+| first_name | last_name | email              | academic_rank | slp_instructor_first_name | slp_instructor_last_name |
++------------+-----------+--------------------+---------------+---------------------------+--------------------------+
+| Charlie    | Cadillac  | ccadillac@dewv.net | Senior        | Tery                      | Tutor                    |
+| Eric       | Elkins    | eelkins@dewv.net   | Senior        | NULL                      | NULL                     |
++------------+-----------+--------------------+---------------+---------------------------+--------------------------+
+2 rows in set (0.00 sec)
+
+mysql> notee
