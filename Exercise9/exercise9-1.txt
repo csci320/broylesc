@@ -1,0 +1,22 @@
+mysql> select student.first_name, student.last_name, visit.purpose from student, visit where student.email = visit.email order by last_name, first_name;
++------------+-----------+-------------------------+
+| first_name | last_name | purpose                 |
++------------+-----------+-------------------------+
+| Alice      | Albert    | Study hall              |
+| Bob        | Booth     | study hall              |
+| Charlie    | Cadillac  | baseball meeting        |
+| Charlie    | Cadillac  | get form signature      |
+| Debra      | Davis     | Tour of learning center |
+| Debra      | Davis     | Help with paper         |
+| Debra      | Davis     | MATH 101                |
+| Eric       | Elkins    | Team Meeting            |
+| Frank      | Forest    | math help               |
+| Frank      | Forest    | math help               |
+| Gary       | Gatehouse | study hall              |
+| Gary       | Gatehouse | study hall              |
+| Hannah     | Hermanson | study hall              |
+| Irving     | Icehouse  | Meet SLP instructor     |
++------------+-----------+-------------------------+
+14 rows in set (0.00 sec)
+
+mysql> notee

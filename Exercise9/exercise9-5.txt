@@ -1,0 +1,22 @@
+mysql> select first_name, last_name, name, season
+    -> from student join student_sport
+    -> on student.email = student_sport.email
+    -> join sport
+    -> on student_sport.sport_name = sport.name;
++------------+-----------+----------+--------+
+| first_name | last_name | name     | season |
++------------+-----------+----------+--------+
+| Charlie    | Cadillac  | Baseball | Spring |
+| Eric       | Elkins    | Baseball | Spring |
+| Bob        | Booth     | Golf     | Fall   |
+| Charlie    | Cadillac  | Soccer   | Fall   |
+| Charlie    | Cadillac  | Soccer   | Fall   |
+| Debra      | Davis     | Soccer   | Fall   |
+| Debra      | Davis     | Soccer   | Fall   |
+| Debra      | Davis     | Softball | Spring |
++------------+-----------+----------+--------+
+8 rows in set (0.00 sec)
+
+Removing the gender match causes mysql to display sports
+with multiple gender's twice because without filtering by gender
+it matches with two records in the sport table.mysql> notee
