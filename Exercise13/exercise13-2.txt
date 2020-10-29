@@ -1,0 +1,20 @@
+mysql> select email, major_name, (select count(email) from student_major b where student_major.major_name = b.major_name ) from student_major;
++---------------------+------------------+-------------------------------------------------------------------------------------------+
+| email               | major_name       | (select count(email) from student_major b where student_major.major_name = b.major_name ) |
++---------------------+------------------+-------------------------------------------------------------------------------------------+
+| eelkins@dewv.net    | Biology          |                                                                                         1 |
+| hhermanson@dewv.net | Chemistry        |                                                                                         2 |
+| iicehouse@dewv.net  | Chemistry        |                                                                                         2 |
+| aalbert@dewv.net    | Computer Science |                                                                                         3 |
+| bbooth@dewv.net     | Computer Science |                                                                                         3 |
+| ggatehouse@dewv.net | Computer Science |                                                                                         3 |
+| ccadillac@dewv.net  | English          |                                                                                         2 |
+| ddavis@dewv.net     | English          |                                                                                         2 |
+| ggatehouse@dewv.net | Mathematics      |                                                                                         1 |
+| bbooth@dewv.net     | Philosophy       |                                                                                         2 |
+| ddavis@dewv.net     | Philosophy       |                                                                                         2 |
+| fforest@dewv.net    | Undecided        |                                                                                         1 |
++---------------------+------------------+-------------------------------------------------------------------------------------------+
+12 rows in set (0.00 sec)
+
+mysql> notee
