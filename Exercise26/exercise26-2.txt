@@ -1,0 +1,7 @@
+> db.students.createIndex( { sports: 1 })
+{
+        "createdCollectionAutomatically" : false,
+        "numIndexesBefore" : 3,
+        "numIndexesAfter" : 4,
+        "ok" : 1
+}

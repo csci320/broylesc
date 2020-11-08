@@ -1,0 +1,7 @@
+> db.computers.createIndex( {  location: 1, cubicle: 1 } )
+{
+        "createdCollectionAutomatically" : false,
+        "numIndexesBefore" : 1,
+        "numIndexesAfter" : 2,
+        "ok" : 1
+}

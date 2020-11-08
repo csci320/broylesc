@@ -1,0 +1,3 @@
+Referential Integrity I find is far more enforced in MySQL than MongoDB. MySQL's tables are far easier to track and with enforcement features in MySQL
+references require more attention. MongoDB seems to be more user friendly as it's syntax is very much object oriented. However I found it more difficult
+to track and trouble shoot errors in the massive chunks of object code.

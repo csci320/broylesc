@@ -1,0 +1,2 @@
+Mongo uses a unique key and Mysql uses primary keys. Both of these features are esentially the same conceptually when being used to identify a record or document.
+I think both do well enforcing entity integrity.
