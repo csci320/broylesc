@@ -1,0 +1,27 @@
+> db.computers.insertOne({ _id: 1, location: "NLC", cubicle: "A", memory: 4, printer: "P1"})
+{ "acknowledged" : true, "insertedId" : 1 }
+
+> db.computers.insertMany([... {... _id: 2,... location: "NLC",... cubicle: "B",... memory: 8,... printer: "P2",... },... {... _id: 3,... location: "NLC",
+... cubicle: "C",
+... memory: 8,
+... printer: "P2",
+... },
+... {
+... _id: 4,
+... location: "Writing Center",
+... cubicle: "A",
+... memory: 4,
+... printer: "P3",
+... },
+... {
+... _id: 5,
+... location: "Writing Center",
+... cubicle: "B",
+... memory: 4,
+... printer: "P4",
+... },
+... ]);
+{ "acknowledged" : true, "insertedIds" : [ 2, 3, 4, 5 ] }
+
+> db.computers.count({memory: {$lt: 8}})
+3

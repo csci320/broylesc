@@ -1,0 +1,8 @@
+> db.students.aggregate(
+... [
+... { $match: { residential_status: { $ne: "On campus"}}},
+... { $group: { _id: '$academic_rank', students: { $sum: 1}}}
+... ]
+... )
+{ "_id" : "Senior", "students" : 1 }
+{ "_id" : "Junior", "students" : 1 }

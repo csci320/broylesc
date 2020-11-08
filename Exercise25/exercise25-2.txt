@@ -1,0 +1,6 @@
+> db.visits.aggregate([
+... { $group: {_id:'$location', visits: {$sum: 1}}},
+... ])
+{ "_id" : " Writing center", "visits" : 1 }
+{ "_id" : "Albert Hall", "visits" : 13 }
+> 

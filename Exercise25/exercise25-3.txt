@@ -1,0 +1,4 @@
+> db.students.aggregate([{ $group: {_id:'$academic_rank', students: {$sum: 1}}}])
+{ "_id" : "Senior", "students" : 3 }
+{ "_id" : "Junior", "students" : 1 }
+{ "_id" : "Sophomore", "students" : 5 }
