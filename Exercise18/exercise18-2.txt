@@ -1,0 +1,16 @@
+gitpod /workspace/broylesc $ mysqldump learning_center > backup.sql
+gitpod /workspace/broylesc $ mysql
+
+mysql> use learning_center;
+Database changed
+
+mysql> drop table visit2nf;
+Query OK, 0 rows affected (0.15 sec)
+
+mysql> truncate table computer;
+Query OK, 0 rows affected (0.35 sec)
+
+mysql> exit
+Bye
+
+gitpod /workspace/broylesc $ mysql learning_center < backup.sql

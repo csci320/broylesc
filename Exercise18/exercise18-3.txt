@@ -1,0 +1,9 @@
+gitpod /workspace/broylesc $ mysql
+
+mysql> create database exercise18;
+Query OK, 1 row affected (0.10 sec)
+
+mysql> exit
+Bye
+
+gitpod /workspace/broylesc $ mysql exercise18 < backup.sql

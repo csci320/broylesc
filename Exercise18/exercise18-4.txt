@@ -1,0 +1,60 @@
+mysql> use exercise18
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+
+mysql> start transaction;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> drop table visit2nf;
+Query OK, 0 rows affected (0.15 sec)
+
+mysql> show tables;
++----------------------+
+| Tables_in_exercise18 |
++----------------------+
+| athletes             |
+| commuter_students    |
+| computer             |
+| location             |
+| major                |
+| major_view           |
+| printer              |
+| sport                |
+| sport_roster         |
+| staff                |
+| student              |
+| student_major        |
+| student_sport        |
+| visit                |
+| visit1nf             |
++----------------------+
+15 rows in set (0.00 sec)
+
+mysql> rollback;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> show tables;
++----------------------+
+| Tables_in_exercise18 |
++----------------------+
+| athletes             |
+| commuter_students    |
+| computer             |
+| location             |
+| major                |
+| major_view           |
+| printer              |
+| sport                |
+| sport_roster         |
+| staff                |
+| student              |
+| student_major        |
+| student_sport        |
+| visit                |
+| visit1nf             |
++----------------------+
+15 rows in set (0.00 sec)
+
+mysql> notee;
