@@ -1,0 +1,6 @@
+> db.students.find({ academic_rank: 'Freshman', academic_rank: 'Sophomore'}, {first_name: 1, last_name: 1})
+{ "_id" : 1, "first_name" : "Gary", "last_name" : "Gatehouse" }
+{ "_id" : 3, "first_name" : "Irving", "last_name" : "Icehouse" }
+{ "_id" : 5, "first_name" : "Bob", "last_name" : "Booth" }
+{ "_id" : 6, "first_name" : "Debbie", "last_name" : "Davis" }
+{ "_id" : 8, "first_name" : "Frank", "last_name" : "Forest" }

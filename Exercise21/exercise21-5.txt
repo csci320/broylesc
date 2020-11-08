@@ -1,0 +1,5 @@
+> db.students.find({sports: { $exists: true}},{first_name: 1, last_name: 1, sports: 1}).sort({ last_name: 1})
+{ "_id" : 5, "first_name" : "Bob", "last_name" : "Booth", "sports" : [ { "name" : "Golf", "gender" : "Men" } ] }
+{ "_id" : 2, "first_name" : "Charlie", "last_name" : "Cadillac", "sports" : [ { "name" : "Soccer", "gender" : "Men" }, { "name" : "Baseball", "gender" : "Men" } ] }
+{ "_id" : 6, "first_name" : "Debbie", "last_name" : "Davis", "sports" : [ { "name" : "Soccer", "gender" : "Women" }, { "name" : "Softball", "gender" : "Women" } ] }
+{ "_id" : 7, "first_name" : "Eric", "last_name" : "Elkins", "sports" : [ { "name" : "Baseball", "gender" : "Men" } ] }

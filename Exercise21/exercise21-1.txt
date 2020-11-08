@@ -1,0 +1,3 @@
+> db.students.find({academic_rank:'Senior'},{first_name: 1, last_name: 1})
+{ "_id" : 4, "first_name" : "Alice", "last_name" : "Albert" }
+{ "_id" : 9, "first_name" : "Hannah", "last_name" : "Hermanson" }
