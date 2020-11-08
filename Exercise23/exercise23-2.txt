@@ -1,0 +1,5 @@
+> db.temp_students.deleteOne( { email: {$ne: 'fforest@dewv.net'}})    -- Forgot to swap to deleteMany
+{ "acknowledged" : true, "deletedCount" : 1 }
+> db.temp_students.deleteMany( { email: {$ne: 'fforest@dewv.net'}})
+{ "acknowledged" : true, "deletedCount" : 7 }
+> 
