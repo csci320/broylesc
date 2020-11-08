@@ -1,0 +1,2 @@
+> db.students.updateMany( { _id: { $ne: 1 } }, { $unset: { someFieldThatWasJustDreamedUp: "just because" } } )
+{ "acknowledged" : true, "matchedCount" : 8, "modifiedCount" : 8 }
