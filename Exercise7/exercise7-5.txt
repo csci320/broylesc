@@ -1,1 +1,2 @@
 The student table contains data that only relates to itself. It doesnt refer to other tables or contain information that is instance specific.
+Partial dependency is impossible since the table only contains one Unique field.
