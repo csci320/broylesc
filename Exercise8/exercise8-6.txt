@@ -1,3 +1,4 @@
-Keeping the transaction records simple is alright depending on scale.
+Transaction Processing Systems should be highly normalized to prevent issues with large amounts of data.
 
-Management and Executive levels benifit from having high levels of normalization to ensure data consistantcy with complex operations.
+Management and Executive levels can be less normalized as they are more direct interaction without the large
+amounts of data.

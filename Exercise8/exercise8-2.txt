@@ -1,1 +1,3 @@
-Both printer and computer are now in 3NF because there is nolonger a transitive dependency.
+Both printer and computer are in BCNF.
+Printer only has a canidate key which determines color.
+Computer's determinants are canidate keys.
