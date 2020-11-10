@@ -1,2 +1,3 @@
-1. 'email' has a non-trivial functional dependency with all of the columns involving information about the visit and student withe the exception of the students name which is trivial
-   functional dependency.
+student name and email are trivial, student first + last name could replace email in the dependencies but would not work in a system if someone has the same name.
+email determines check_in_time, academic_rank, residential_status, and slp name
+email and a specific check_in_time determine check_out_time, location, purpose, purpose_achieved, tutoring, and comments.
