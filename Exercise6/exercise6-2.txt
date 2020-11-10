@@ -1,1 +1,1 @@
-1. Sport name determines season but season does not determine sport.
+1. Sport name and gender determines season.
